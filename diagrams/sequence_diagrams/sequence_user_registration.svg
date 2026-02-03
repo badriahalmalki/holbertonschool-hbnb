@@ -1,0 +1,15 @@
+sequenceDiagram
+    autonumber
+    participant Client as 📱 UI / Client
+    participant API as 🌐 Presentation (API)
+    participant BL as 🧠 Business Logic (Facade)
+    participant DB as 💾 Persistence (DB)
+
+    Client->>API: POST /users {first_name, last_name, email, password}
+    API->>BL: register_user(first_name, last_name, email, password)
+    BL->>DB: check_email_exists(email)
+    DB-->>BL: Email unique
+    BL->>DB: create_user(id, first_name, last_name, email, password, is_admin=false)
+    DB-->>BL: User saved (createdAt)
+    BL-->>API: User details
+    API-->>Client: 201 Created

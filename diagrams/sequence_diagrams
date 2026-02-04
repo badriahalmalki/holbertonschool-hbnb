@@ -2,7 +2,7 @@
 ##### 1- sequence_user_registration 
 
 ```mermaid
-sequenceDiagram
+    sequenceDiagram
     autonumber
     participant Client as 📱 UI / Client
     participant API as 🌐 Presentation (API)
@@ -17,6 +17,7 @@ sequenceDiagram
     DB-->>BL: User saved (createdAt)
     BL-->>API: User details
     API-->>Client: 201 Created
+    end
 ```
 
 

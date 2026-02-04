@@ -17,7 +17,6 @@
     DB-->>BL: User saved (createdAt)
     BL-->>API: User details
     API-->>Client: 201 Created
-    end
 ```
 
 

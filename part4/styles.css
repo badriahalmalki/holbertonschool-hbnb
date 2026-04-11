@@ -1,6 +1,6 @@
 /* 
   This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks. 
-  You'll probably need to override some of theese styles.
+  You'll probably need to override some of these styles.
 */
 
 * {
@@ -19,14 +19,221 @@ header {
     background-color: #333;
     color: #fff;
     padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav a {
+header .logo {
+    height: 40px;
+}
+
+header .login-button {
     color: #fff;
     text-decoration: none;
-    margin-left: 1rem;
+    font-weight: bold;
 }
 
 main {
     padding: 2rem;
+}
+
+/* Fixed parameters (non‑negotiable) */
+.place-card, .review-card {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+/* ---------------------- */
+/* HEADER / NAVIGATION    */
+/* ---------------------- */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    height: 45px;
+}
+
+header .login-button {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #555;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+header .login-button:hover {
+    background-color: #777;
+}
+
+
+/* ---------------------- */
+/* FOOTER                 */
+/* ---------------------- */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+/* ---------------------- */
+/* FILTER SECTION         */
+/* ---------------------- */
+
+.filter-section label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.filter-section select {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* ---------------------- */
+/* PLACE CARDS            */
+/* (fixed parameters)     */
+/* ---------------------- */
+
+.place-card, .review-card {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Additional layout for place cards */
+.place-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.place-card .place-info {
+    flex: 1;
+}
+
+.place-card .price {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.details-button {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.details-button:hover {
+    background-color: #005fa3;
+}
+
+
+/* ---------------------- */
+/* PLACE DETAILS PAGE     */
+/* ---------------------- */
+
+.place-details {
+    margin-bottom: 2rem;
+}
+
+.place-info {
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+
+/* ---------------------- */
+/* REVIEW CARDS           */
+/* ---------------------- */
+
+.review-card .username {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-card .rating {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.review-card .comment {
+    line-height: 1.5;
+}
+
+
+/* ---------------------- */
+/* LOGIN FORM             */
+/* ---------------------- */
+
+#login-form {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#login-form input,
+#login-form button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+/* ---------------------- */
+/* ADD REVIEW FORM        */
+/* ---------------------- */
+
+.add-review,
+#review-form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#review-form textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#review-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#review-form button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#review-form button:hover {
+    background-color: #005fa3;
 }

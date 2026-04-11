@@ -7,19 +7,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <header>
+        <img class="logo" src="logo.png" alt="Site Logo">
+        <a class="login-button" href="login.html">Login</a>
+    </header>
+
     <main>
-        <!-- Add something to idfentify the place you're reviewing -->
+
+        <div id="place-name">
+            <!-- This will be populated dynamically, e.g., "Reviewing: Coffee House" -->
+        </div>
+
         <form id="review-form">
             <h2>Add a Review</h2>
+
             <label for="review">Your Review:</label>
             <textarea id="review" name="review" required></textarea>
+
             <label for="rating">Rating:</label>
             <select id="rating" name="rating" required>
-                <!-- Options for rating -->
+                <option value="">Select rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
             </select>
+
             <button type="submit">Submit Review</button>
         </form>
+
     </main>
+
+    <footer>
+        <p>&copy; 2026 Your Company Name. All rights reserved.</p>
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>

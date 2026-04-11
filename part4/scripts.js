@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p><strong>Host:</strong> <span style="color: teal;">${place.owner ? place.owner.first_name + ' ' + place.owner.last_name : place.owner_id}</span></p>
           <p><strong>Price per night:</strong> <span style="color: green;">$${place.price}</span></p>
           <p><strong>Description:</strong> <span style="color: #555;">${place.description || ''}</span></p>
-          <p><strong>Amenities:</strong> <span style="color: purple;">${(place.amenities || []).join(', ') || 'None'}</span></p>
+          <p><strong>Amenities:</strong> <span style="color: purple;">${(place.amenities || []).map(a => a.name || a).join(', ') || 'None'}</span></p>
         </div>
       `;
     }
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
 
         card.innerHTML = `
-          <p><strong>${r.user_name || 'Anonymous'}:</strong></p>
+          <p><strong>${r.user_name || (r.user ? r.user.first_name + ' ' + r.user.last_name : 'Anonymous')}:</strong></p>
           <p>${r.text}</p>
           <p>${stars}</p>
         `;

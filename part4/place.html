@@ -9,7 +9,7 @@
 <body>
 
     <header>
-        <img class="logo" src="logo.png" alt="Site Logo">
+        <img class="logo" src="images/logo.png" alt="Site Logo">
         <a class="login-button" href="login.html">Login</a>
     </header>
 
@@ -27,7 +27,15 @@
             <form id="review-form">
                 <label for="review-text">Review:</label>
                 <textarea id="review-text" name="review-text" required></textarea>
-                
+                                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
                 <button type="submit">Submit</button>
             </form>
         </section>

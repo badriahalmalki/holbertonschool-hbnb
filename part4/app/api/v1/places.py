@@ -63,6 +63,10 @@ class PlaceResource(Resource):
         owner = facade.get_user(place.owner_id)
         if owner:
             d['owner'] = owner.to_dict()
+            d['reviews'] = [
+            {**r.to_dict(), 'user_name': f"{r.user.first_name} {r.user.last_name}" if r.user else 'Anonymous'}
+            for r in place.reviews
+        ]
         return d, 200
 
     @jwt_required()

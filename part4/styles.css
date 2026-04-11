@@ -16,43 +16,8 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo {
-    height: 40px;
-}
-
-header .login-button {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main {
-    padding: 2rem;
-}
-
-/* Fixed parameters (non‑negotiable) */
-.place-card, .review-card {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-}
-/* ---------------------- */
-/* HEADER / NAVIGATION    */
-/* ---------------------- */
-
-header {
-    background-color: #333;
-    color: #fff;
+    background-color: #89CFF0;
+    color: #333;
     padding: 1rem;
 
     display: flex;
@@ -83,8 +48,8 @@ header .login-button:hover {
 /* ---------------------- */
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #89CFF0;
+    color: #333;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
@@ -123,10 +88,14 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+    background-color: #fff;
+    flex-direction: column;
 }
 
 .place-card .place-info {
     flex: 1;
+    text-align: center;
 }
 
 .place-card .price {
@@ -135,7 +104,7 @@ footer {
 }
 
 .details-button {
-    background-color: #0077cc;
+    background-color: #89CFF0;
     color: #fff;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -143,7 +112,7 @@ footer {
 }
 
 .details-button:hover {
-    background-color: #005fa3;
+    background-color: #6fbde3;
 }
 
 
@@ -158,6 +127,12 @@ footer {
 .place-info {
     margin-top: 1rem;
     line-height: 1.6;
+    text-align: center;
+}
+
+.place-info span {
+    color: #0077cc;
+    font-weight: bold;
 }
 
 
@@ -228,12 +203,34 @@ footer {
     margin-top: 15px;
     padding: 10px;
     width: 100%;
-    background-color: #0077cc;
+    background-color: #89CFF0;
     color: #fff;
     border: none;
     border-radius: 5px;
 }
 
 #review-form button:hover {
-    background-color: #005fa3;
+    background-color: #6fbde3;
+}
+
+/* ---------------------- */
+/* PLACES GRID            */
+/* ---------------------- */
+
+#places-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.place-card {
+    background-color: #fff;
+    text-align: center;
+    flex-direction: column;
+}
+
+#place-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }

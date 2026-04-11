@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.className = 'place-card';
         card.innerHTML = `
           <h3>${place.title}</h3>
-          <p>$${place.price} / night</p>
+          <p>Price per night: $${place.price}</p>
           <a href="place.html?id=${place.id}" class="details-button">View Details</a>
         `;
         placesList.appendChild(card);
@@ -123,13 +123,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayPlaceDetails(place) {
+      const titleEl = document.getElementById('place-title');
+      if (titleEl) titleEl.textContent = place.title || '';
+
       placeDetails.innerHTML = `
-        <div class="place-info">
+        <div class="place-info" style="text-align: center;">
           <h2>${place.title}</h2>
-          <p><strong>Host:</strong> ${place.owner ? place.owner.first_name + ' ' + place.owner.last_name : place.owner_id}</p>
-          <p><strong>Price:</strong> $${place.price} / night</p>
-          <p><strong>Description:</strong> ${place.description || ''}</p>
-          <p><strong>Amenities:</strong> ${(place.amenities || []).join(', ') || 'None'}</p>
+          <p><strong>Host:</strong> <span style="color: teal;">${place.owner ? place.owner.first_name + ' ' + place.owner.last_name : place.owner_id}</span></p>
+          <p><strong>Price per night:</strong> <span style="color: green;">$${place.price}</span></p>
+          <p><strong>Description:</strong> <span style="color: #555;">${place.description || ''}</span></p>
+          <p><strong>Amenities:</strong> <span style="color: purple;">${(place.amenities || []).join(', ') || 'None'}</span></p>
         </div>
       `;
     }
@@ -146,7 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
       reviews.forEach(r => {
         const card = document.createElement('div');
         card.className = 'review-card';
-        card.innerHTML = `<p>${r.text}</p><p><strong>By:</strong> ${r.user_name || 'Anonymous'}</p><p><strong>Rating:</strong> ${r.rating}/5</p>`;
+
+        const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+
+        card.innerHTML = `
+          <p><strong>${r.user_name || 'Anonymous'}:</strong></p>
+          <p>${r.text}</p>
+          <p>${stars}</p>
+        `;
+
         reviewsSection.appendChild(card);
       });
     }

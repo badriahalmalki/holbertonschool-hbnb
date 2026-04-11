@@ -14,6 +14,7 @@
     </header>
 
     <main>
+        <h1 id="place-title"></h1>
         <section id="place-details" class="place-details">
             <!-- Place details will be populated dynamically -->
         </section>
@@ -25,18 +26,18 @@
         <section id="add-review">
             <h2>Add a Review</h2>
             <form id="review-form">
-                <label for="review-text">Review:</label>
+                <label for="review-text">Your Review:</label>
                 <textarea id="review-text" name="review-text" required></textarea>
                                 <label for="rating">Rating:</label>
                 <select id="rating" name="rating" required>
                     <option value="">Select rating</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
                 </select>
-                <button type="submit">Submit</button>
+                <button type="submit">Submit Review</button>
             </form>
         </section>
     </main>

@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       placeDetails.innerHTML = `
         <div class="place-info">
           <h2>${place.title}</h2>
-          <p><strong>Host:</strong> ${place.owner_id}</p>
+          <p><strong>Host:</strong> ${place.owner ? place.owner.first_name + ' ' + place.owner.last_name : place.owner_id}</p>
           <p><strong>Price:</strong> $${place.price} / night</p>
           <p><strong>Description:</strong> ${place.description || ''}</p>
           <p><strong>Amenities:</strong> ${(place.amenities || []).join(', ') || 'None'}</p>

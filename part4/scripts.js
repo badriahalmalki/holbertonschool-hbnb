@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
       reviews.forEach(r => {
         const card = document.createElement('div');
         card.className = 'review-card';
-        card.innerHTML = `<p>${r.text}</p><p><strong>Rating:</strong> ${r.rating}/5</p>`;
+        card.innerHTML = `<p>${r.text}</p><p><strong>By:</strong> ${r.user_name || 'Anonymous'}</p><p><strong>Rating:</strong> ${r.rating}/5</p>`;
         reviewsSection.appendChild(card);
       });
     }
